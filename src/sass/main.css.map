@@ -1,0 +1,21 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "main.scss",
+        "base/_base.scss",
+        "base/_container.scss",
+        "utils/_variables.scss",
+        "layouts/_about.scss",
+        "layouts/_advantages.scss",
+        "layouts/_contacts.scss",
+        "layouts/_customer-reviews.scss",
+        "layouts/_footer.scss",
+        "layouts/_gallery.scss",
+        "layouts/_header.scss",
+        "layouts/_hero.scss",
+        "layouts/_products.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
