@@ -1,7 +1,6 @@
-@import './base/base';
-@import './base/container';
 @import './utils/variables';
-
+@import './base/common';
+@import './base/container';
 @import './layouts/about';
 @import './layouts/advantages';
 @import './layouts/contacts';
