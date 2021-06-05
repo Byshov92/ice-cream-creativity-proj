@@ -1,0 +1,36 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-Burger {
+  width: 1.4287109375em;
+}
+
+.icon-facebook {
+  width: 0.5em;
+}
+
+.icon-quotes {
+  width: 1.349609375em;
+}
+
+.icon-telegram {
+  width: 1.375em;
+}
+
+.icon-Vector {
+  width: 1.0830078125em;
+}
