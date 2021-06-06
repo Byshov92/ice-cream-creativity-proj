@@ -11,9 +11,8 @@
 
 .basement__title {
   max-width: 200px;
-  font: '$title-font';
+  font-family: $title-font;
   font-style: normal;
-  font-weight: '$font-normal';
   font-size: 34px;
   line-height: 1.14;
   letter-spacing: 0.04em;
@@ -22,6 +21,7 @@
   margin-bottom: 42px;
 
   &--accent {
+    font-family: $title-font;
     max-width: 220px;
     font-size: 18px;
     line-height: 1.16;
@@ -44,7 +44,7 @@
 .basement__phone {
   display: block;
   text-align: end;
-  font-family: '$main-font';
+  font-family: $main-font;
   font-style: normal;
   font-weight: $font-bold;
   font-size: 12px;
@@ -52,11 +52,11 @@
   letter-spacing: 0em;
   color: $head-text;
   margin-bottom: 42px;
-}
 
-.basement__phone--accent {
-  font-weight: $font-medium;
-  color: $accent-color;
+  &--accent {
+    font-weight: $font-medium;
+    color: $accent-color;
+  }
 }
 
 .basement__copy {
