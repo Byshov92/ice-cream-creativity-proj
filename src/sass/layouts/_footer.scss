@@ -1,0 +1,66 @@
+.basement {
+  padding: 25px 0px;
+  background: $bg-section;
+}
+
+.basement__title,
+.basement__copy,
+.basement__title--accent {
+  margin: 0;
+}
+
+.basement__title {
+  max-width: 200px;
+  font: $title-font;
+  font-style: normal;
+  font-weight: $font-normal;
+  font-size: 34px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $accent-color;
+  margin-bottom: 42px;
+
+  &--accent {
+    max-width: 220px;
+    font-size: 18px;
+    line-height: 1.16;
+    text-transform: uppercase;
+    color: $circle;
+    margin-bottom: 16px;
+  }
+}
+
+.basement__list {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 46px;
+}
+
+.basement__item:not(:last-child) {
+  margin-right: 28px;
+}
+
+.basement__phone {
+  display: block;
+  text-align: end;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: $font-bold;
+  font-size: 12px;
+  line-height: 1.83;
+  letter-spacing: 0em;
+  color: $head-text;
+  margin-bottom: 42px;
+}
+
+.basement__phone--accent {
+  font-weight: $font-medium;
+  color: $accent-color;
+}
+
+.basement__copy {
+  max-width: 150px;
+  margin: 0 auto;
+  padding-top: 22px;
+}
