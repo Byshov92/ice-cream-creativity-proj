@@ -11,9 +11,9 @@
 
 .basement__title {
   max-width: 200px;
-  font: $title-font;
+  font: '$title-font';
   font-style: normal;
-  font-weight: $font-normal;
+  font-weight: '$font-normal';
   font-size: 34px;
   line-height: 1.14;
   letter-spacing: 0.04em;
@@ -44,7 +44,7 @@
 .basement__phone {
   display: block;
   text-align: end;
-  font-family: $main-font;
+  font-family: '$main-font';
   font-style: normal;
   font-weight: $font-bold;
   font-size: 12px;
