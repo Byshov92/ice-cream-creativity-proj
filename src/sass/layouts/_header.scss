@@ -8,24 +8,30 @@
   }
   @media screen and (min-width: 768px) {
     padding-bottom: 15px;
-    display: flex;
-    justify-content: space-between;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
   }
   @media screen and (min-width: 1280px) {
     padding-bottom: 84px;
-    display: flex;
-    justify-content: space-between;
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
     .nav {
       display: flex;
       width: 541px;
       height: 21px;
       justify-content: space-between;
-      margin-left: 110px;
+      margin-left: 80px;
       margin-top: 10px;
       //margin-left: 110px;
     }
     .header__navigation {
       display: flex;
+      width: 100%;
     }
   }
 }
@@ -64,6 +70,14 @@
     pointer-events: auto;
     transform: translateY(0);
   }
+  @media screen and(min-width:321px) {
+    width: 280px;
+    left: unset;
+    right: 0;
+  }
+  @media screen and(min-width: 480px) {
+    width: 260px;
+  }
 }
 
 .menu__button {
@@ -97,27 +111,34 @@
   height: 12px;
 }
 
-.menu-container__button {
-  @media screen and (max-width: 479px) {
-    width: 209px;
-    height: 44px;
-  }
-}
 .button {
   @extend %button;
   @include cubic(background-color);
   @include cubic(color);
+  width: 160px;
+  height: 44px;
   &:hover,
   &:focus {
     background-color: $accent-color;
     color: $main-color;
   }
-  @media screen and(min-width:1280px) {
-    width: 159px;
-    height: 44px;
+  @media screen and(max-width:767px) {
+    display: none;
   }
 }
-
+.menu-container__button {
+  display: block;
+  height: 44px;
+  @media screen and (max-width: 320px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 321px) {
+    width: 209px;
+  }
+  @media screen and(min-width:480px) {
+    width: 186px;
+  }
+}
 .menu-container__list {
   padding-top: 20px;
   .menu-container__item {
