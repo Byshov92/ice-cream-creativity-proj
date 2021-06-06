@@ -1,11 +1,19 @@
+.button {
+  background-color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  color: #d41443;
+  font-family: "DM Sans", sans-serif;
+  border-color: transparent;
+  border-radius: 22px;
+}
+
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
@@ -29,8 +37,7 @@ img {
 a {
   text-decoration: none;
   color: #ffffff;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 450ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a:hover,
@@ -41,8 +48,7 @@ a:focus {
 ul {
   list-style-type: none;
   margin: 0;
-  -webkit-padding-start: 0px;
-          padding-inline-start: 0px;
+  padding-inline-start: 0px;
 }
 
 input,
@@ -82,5 +88,264 @@ button {
     width: 1280px;
     padding: 0 115px;
   }
+}
+
+@font-face {
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/titan-one-v8-latin-regular.eot");
+  src: local(""), url("../fonts/titan-one-v8-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/titan-one-v8-latin-regular.woff2") format("woff2"), url("../fonts/titan-one-v8-latin-regular.woff") format("woff"), url("../fonts/titan-one-v8-latin-regular.ttf") format("truetype"), url("../fonts/titan-one-v8-latin-regular.svg#TitanOne") format("svg");
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/dm-sans-v6-latin-regular.eot");
+  src: local(""), url("../fonts/dm-sans-v6-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/dm-sans-v6-latin-regular.woff2") format("woff2"), url("../fonts/dm-sans-v6-latin-regular.woff") format("woff"), url("../fonts/dm-sans-v6-latin-regular.ttf") format("truetype"), url("../fonts/dm-sans-v6-latin-regular.svg#DMSans") format("svg");
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/dm-sans-v6-latin-500.eot");
+  src: local(""), url("../fonts/dm-sans-v6-latin-500.eot?#iefix") format("embedded-opentype"), url("../fonts/dm-sans-v6-latin-500.woff2") format("woff2"), url("../fonts/dm-sans-v6-latin-500.woff") format("woff"), url("../fonts/dm-sans-v6-latin-500.ttf") format("truetype"), url("../fonts/dm-sans-v6-latin-500.svg#DMSans") format("svg");
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/dm-sans-v6-latin-700.eot");
+  src: local(""), url("../fonts/dm-sans-v6-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/dm-sans-v6-latin-700.woff2") format("woff2"), url("../fonts/dm-sans-v6-latin-700.woff") format("woff"), url("../fonts/dm-sans-v6-latin-700.ttf") format("truetype"), url("../fonts/dm-sans-v6-latin-700.svg#DMSans") format("svg");
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Titan One', cursive;
+  font-size: 58px;
+  line-height: 1.13;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.header {
+  position: relative;
+  width: 100vw;
+  padding-top: 37px;
+  background-color: #ffb8ca;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header {
+    padding-bottom: 84px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .header .nav {
+    display: flex;
+    width: 541px;
+    height: 21px;
+    justify-content: space-between;
+    margin-left: 110px;
+    margin-top: 10px;
+  }
+  .header .header__navigation {
+    display: flex;
+  }
+}
+
+.nav__link_active {
+  color: #d41443;
+}
+
+.nav__link {
+  font-weight: 700;
+}
+
+.logo {
+  display: block;
+  width: 199px;
+  height: 50px;
+}
+
+@media screen and (max-width: 1279px) {
+  .nav {
+    display: none;
+  }
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 9;
+  padding: 60px 34px 0 34px;
+  opacity: 0;
+  background-color: #e17992;
+  pointer-events: none;
+  overflow-y: scroll;
+  margin: 0;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-container.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.menu__button {
+  position: absolute;
+  display: flex;
+  width: 20px;
+  height: 12px;
+  right: 20px;
+  top: 24px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  z-index: 12;
+  fill: #ffffff;
+  color: #000000;
+  justify-content: center;
+}
+
+.menu__button:hover .icon-menu,
+.menu__button:focus .icon-menu {
+  fill: #d41443;
+}
+
+@media screen and (min-width: 768px) {
+  .menu__button {
+    display: none;
+  }
+}
+
+.icon-close {
+  display: none;
+}
+
+.icon-menu {
+  display: block;
+  width: 20px;
+  height: 12px;
+}
+
+@media screen and (max-width: 479px) {
+  .menu-container__button {
+    width: 209px;
+    height: 44px;
+  }
+}
+
+.button {
+  transition: background-color 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 450ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover, .button:focus {
+  background-color: #d41443;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 1280px) {
+  .button {
+    width: 159px;
+    height: 44px;
+  }
+}
+
+.menu-container__list {
+  padding-top: 20px;
+}
+
+.menu-container__list .menu-container__item {
+  padding: 12px 0;
+}
+
+.menu__button.is-open .icon-close {
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+
+.menu__button.is-open .icon-menu {
+  display: none;
+}
+
+@font-face {
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/titan-one-v8-latin-regular.eot");
+  src: local(""), url("../fonts/titan-one-v8-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/titan-one-v8-latin-regular.woff2") format("woff2"), url("../fonts/titan-one-v8-latin-regular.woff") format("woff"), url("../fonts/titan-one-v8-latin-regular.ttf") format("truetype"), url("../fonts/titan-one-v8-latin-regular.svg#TitanOne") format("svg");
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/dm-sans-v6-latin-regular.eot");
+  src: local(""), url("../fonts/dm-sans-v6-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/dm-sans-v6-latin-regular.woff2") format("woff2"), url("../fonts/dm-sans-v6-latin-regular.woff") format("woff"), url("../fonts/dm-sans-v6-latin-regular.ttf") format("truetype"), url("../fonts/dm-sans-v6-latin-regular.svg#DMSans") format("svg");
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/dm-sans-v6-latin-500.eot");
+  src: local(""), url("../fonts/dm-sans-v6-latin-500.eot?#iefix") format("embedded-opentype"), url("../fonts/dm-sans-v6-latin-500.woff2") format("woff2"), url("../fonts/dm-sans-v6-latin-500.woff") format("woff"), url("../fonts/dm-sans-v6-latin-500.ttf") format("truetype"), url("../fonts/dm-sans-v6-latin-500.svg#DMSans") format("svg");
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/dm-sans-v6-latin-700.eot");
+  src: local(""), url("../fonts/dm-sans-v6-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/dm-sans-v6-latin-700.woff2") format("woff2"), url("../fonts/dm-sans-v6-latin-700.woff") format("woff"), url("../fonts/dm-sans-v6-latin-700.ttf") format("truetype"), url("../fonts/dm-sans-v6-latin-700.svg#DMSans") format("svg");
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Titan One', cursive;
+  font-size: 58px;
+  line-height: 1.13;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=main.css.map */
