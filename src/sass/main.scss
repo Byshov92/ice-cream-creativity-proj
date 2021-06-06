@@ -1,9 +1,9 @@
 @import './utils/variables';
 @import './utils/mixin';
 @import './utils/placeholders';
-
 @import './base/common';
 @import './base/container';
+@import './base/visually-hidden';
 @import './vendors/fonts';
 @import './layouts/about';
 @import './layouts/advantages';
@@ -14,4 +14,3 @@
 @import './layouts/header';
 @import './layouts/hero';
 @import './layouts/products';
-@import './vendors/fonts';
