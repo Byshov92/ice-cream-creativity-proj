@@ -1,24 +1,30 @@
-<header class="header">
+<header class="header" id="header">
     <section class="container">
     <nav class="header__navigation">
-        <a class="logo" href="index.html">
+        <a class="logo" href="#header">
             <img src="/images/logo.png" alt="IceCream" /></a>
         <ul class="nav">
-            <li><a class="nav__link_active nav__link" href="">Home</a></li>
-            <li><a class="nav__link" href="">About us</a></li>
-            <li><a class="nav__link" href="">How it’s made?</a></li>
-            <li><a class="nav__link" href="">Our products</a></li>
-            <li><a class="nav__link" href="">Contact</a></li>
+            <li><a class="nav__link_active nav__link" href="#header">Home</a></li>
+            <li><a class="nav__link" href="#about">About us</a></li>
+            <li><a class="nav__link" href="#about">How it’s made?</a></li>
+            <li><a class="nav__link" href="#products">Our products</a></li>
+            <li><a class="nav__link" href="#footer">Contact</a></li>
         </ul>
     </nav>
-    <button class="button">Buy now </button>
+    <button class="button">
+        <span class="header__button-span">Buy now 
+        <svg class="header__button-arrow" width="6" height="10">
+            <use href="./images/icons/sprite.svg#icon-but" />
+        </svg>
+        </span>
+    </button>
     <button data-menu-button aria-expanded="false" type="button" class="menu__button " aria-controls="menu-container">
         <svg aria-label="Переключатель мобильного меню" >
-            <use class="icon-menu" width="20px" height="12px" href="./images/icomoon/symbol-defs.svg#icon-menu"></use>
-            <use class="icon-close" width="14" height="14" href="./images/icomoon/symbol-defs.svg#icon-close"></use>
+            <use class="icon-menu" width="20" height="12" href="./images/icons/sprite.svg#icon-menu"></use>
+            <use class="icon-close" width="14" height="14" href="./images/icons/sprite.svg#icon-close"></use>
         </svg>
     </button>
-    <div class="menu-container" id="menu-container" data-menu>
+    <div class="menu-container wow bounceInUp" id="menu-container" data-menu>
             <button class="menu-container__button button">Buy now</button>
             <ul class="menu-container__list">
                          <li class="menu-container__item"><a class="menu-container__link_active nav__link" href="">Home</a></li>
