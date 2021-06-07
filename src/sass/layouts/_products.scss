@@ -52,12 +52,23 @@
   margin-top: -30px;
 }
 
-.producte__list {
+.producte__item {
   border-radius: 24px;
+  padding: 41px;
   @include calcFor(1);
 
   @media screen and (min-width: 768px) {
-    @include calcFor(3n);
+    padding: 40px 11px;
+
+    // margin-left: 30px;
+    // margin-top: 30px;
+    // flex-basis: calc((100% - 3 * 30px) / 3);
+
+    @include calcFor(3);
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 50px 44px;
   }
 }
 
@@ -69,11 +80,15 @@
   }
 }
 
-.producte__item--bg-yellow::before {
-  background-image: url('../../images/mobile/products/icecoffee.png');
-  background-repeat: no-repeat;
-  background-position: center;
-}
+// .producte__item::after {
+//   background-image: url('../images/mobile/products/');
+// }
+
+// .producte__item--bg-yellow::before {
+//   background-image: url('../images/mobile/products/icecoffee.png');
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }
 
 .producte__item--bg-pink {
   background-color: $bg-header;
@@ -94,4 +109,32 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $main-color;
+}
+
+.producte__paragraph-card {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $main-color;
+}
+
+.button-arrow-right {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border-color: $main-color;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon-arrow-right {
+  width: 12px;
+  height: 12px;
+  fill: $home-slider;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
