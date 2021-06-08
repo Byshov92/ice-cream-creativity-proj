@@ -16,6 +16,7 @@
   margin-top: -$indent;
 }
 
+// для отзывчивых фоновых изображений
 @mixin product-image($class, $device, $image) {
   .#{$class}::before {
     background-image: url('../images/#{$device}/products/#{$image}.png');
