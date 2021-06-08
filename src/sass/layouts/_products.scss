@@ -24,7 +24,18 @@
 
   margin-top: 0;
   margin-bottom: 15px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    line-height: 1.16;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 30px;
+    line-height: 1.13;
+  }
 }
+
 .producte__title {
   font-family: $title-font;
   font-size: 34px;
@@ -38,11 +49,15 @@
   margin-bottom: 145px;
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 40px;
+    margin-bottom: 150px;
+    font-size: 48px;
+    line-height: 1.14;
   }
 
   @media screen and (min-width: 1280px) {
-    margin-bottom: 50px;
+    margin-bottom: 260px;
+    font-size: 58px;
+    line-height: 1.13;
   }
 }
 
@@ -80,20 +95,6 @@
   }
 }
 
-// .producte__item--bg-yellow::before {
-//   background-image: url('../images/mobile/products/icecoffee.png');
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   content: '';
-//   width: 240px;
-//   height: 250px;
-//   display: block;
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   transform: translate(-50px, -50px);
-// }
-
 .producte__item--bg-pink {
   background-color: $bg-header;
 }
@@ -118,6 +119,10 @@
   margin-bottom: 65px;
   position: relative;
 
+  @media screen and (min-width: 768px) {
+    padding-top: 130px;
+  }
+
   &::before {
     background-repeat: no-repeat;
     background-position: center;
@@ -129,6 +134,16 @@
     bottom: 45px;
     left: 50%;
     transform: translateX(-50%);
+
+    @media screen and (min-width: 768px) {
+      width: calc(100% + 20px);
+      height: 225px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: calc(100% + 90px);
+      height: 335px;
+    }
   }
 
   &::after {
@@ -147,6 +162,7 @@
 
   @media screen and (min-width: 1280px) {
     font-size: 30px;
+    padding-top: 85px;
   }
 }
 
@@ -170,6 +186,14 @@
   letter-spacing: 0.04em;
   color: $main-color;
   margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 60px;
+  }
 }
 
 .button-arrow-right {
