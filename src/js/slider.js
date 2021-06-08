@@ -5,7 +5,7 @@ $('.customer-reviews').slick({
   infinite: true,
   slidesToShow: 1,
   // slidesToScroll: 1,
-  autoplaySpeed: 200000,
+  autoplaySpeed: 1050,
   centerMode: false,
   // variableWidth: true,
   nextArrow: '.next',
