@@ -102,8 +102,8 @@
       height: 399px;
     }
     @media screen and (min-width: 1280px) {
-      padding-left: 75px;
-      padding-right: 75px;
+      padding-left: 115px;
+      padding-right: 115px;
       height: 665px;
     }
   }
@@ -112,16 +112,13 @@
       display: flex;
       justify-content: space-between;
       flex-direction: row-reverse;
-      // text-align: left;
       padding-top: 94px;
     }
     @media screen and (min-width: 1280px) {
       padding-top: 156px;
     }
   }
-
   &-navigation {
-    text-align: left;
     padding-top: 193px;
     @media screen and (min-width: 768px) {
       padding-top: 8px;
@@ -138,6 +135,7 @@
     font-size: 26px;
     line-height: 1.15;
     letter-spacing: 0.04em;
+    text-align: left;
     color: $main-color;
     text-transform: uppercase;
     @media screen and (min-width: 768px) {
@@ -181,7 +179,7 @@
     }
   }
   &-btn-products {
-    @extend %button;
+    @extend %btn-hero;
     padding-top: 7px;
     padding-bottom: 6px;
     width: 62.4px;
@@ -203,9 +201,15 @@
     .link {
       color: $main-color;
     }
+    // .hero-btn-text {
+    //   font-size: 8px;
+    //   @media screen and (min-width: 1280px) {
+    //     font-size: 14px;
+    //   }
+    // }
   }
   &-btn-him {
-    @extend %button;
+    @extend %btn-hero;
     padding-top: 7px;
     padding-bottom: 6px;
     text-align: center;
@@ -347,7 +351,7 @@
       margin-bottom: 20px;
     }
   }
-  &-arrow {
+  .milk-arrow {
     width: 18px;
     @media screen and (min-width: 1280px) {
       width: 26px;
