@@ -1,7 +1,7 @@
 @import '../utils/variables';
 
 .section-reviws {
-  padding: 30px 0px;
+  padding: 132px 0px;
   background-color: white;
 }
 
@@ -15,25 +15,15 @@
   margin-right: auto;
   margin-bottom: 29px;
 }
-.customer-reviews__review {
+.customer-reviews__block {
   position: relative;
-  font-family: $main-font;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 31px;
-  text-align: center;
-  letter-spacing: 0.04em;
-  color: $head-text;
-
-  background-color: #fafafa;
-  // background-image: -webkit-linear-gradient(#aaa 1px, transparent 1px);
-  // background-size: 100% 31px;
-  // background-color: white;
-  // background-image: -webkit-linear-gradient(#aaa 1px, transparent 1px);
-  // background-image: linear-gradient(#aaa 1px, transparent 1px);
-  // background-position: bottom;
   padding: 43px 66px 26px 66px;
   margin-bottom: 52px;
+  background-color: #fafafa;
+  background-image: url(./../images/icons/quotes.svg);
+  background-position: 50px 30px;
+  background-size: 54px 40px;
+  background-repeat: no-repeat;
   &::after {
     position: absolute;
     bottom: -46px;
@@ -44,14 +34,43 @@
     color: #c7133e;
     font-size: 30px;
   }
+}
+.customer-reviews__review {
+  position: relative;
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 31px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $head-text;
+  // text-decoration: underline #e1e1e1;
+
+  background-image: -webkit-linear-gradient(#e1e1e1 1px, transparent 1px);
+  background-size: 100% 31px;
+
+  background-image: -webkit-linear-gradient(#e1e1e1 1px, transparent 1px);
+  background-image: linear-gradient(#e1e1e1 1px, transparent 1px);
+  background-position: 0px 28px;
+  background-repeat: round;
+
   @media screen and (min-width: 772px) and (max-width: 1279px) {
     font-size: 14px;
     line-height: 30px;
-    // background-size: 100% 30px;
+    background-position: 0px 28px;
   }
   @media screen and (min-width: 1280px) {
     line-height: 30px;
+    background-position: 0px 28px;
   }
+}
+.customer-reviews__bg-icon {
+  position: absolute;
+  fill: black;
+  top: 30px;
+  left: 50px;
+  width: 54px;
+  width: 40px;
 }
 .customer-reviews__name-city {
   font-family: $main-font;
