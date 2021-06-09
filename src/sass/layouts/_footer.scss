@@ -1,18 +1,14 @@
-.basement__title,
-.basement__copy,
-.basement__title--accent {
-  margin: 0;
-}
-
 .basement {
-  padding: 25px 0px;
+  padding: 50px 0px 25px 0px;
   background: $bg-section;
 
   @media screen and (min-width: 768px) {
+    padding-top: 50px;
     padding-bottom: 18px;
   }
 
   @media screen and (min-width: 1280px) {
+    padding-top: 50px;
     padding-bottom: 10px;
   }
 
@@ -36,10 +32,6 @@
     @media screen and (min-width: 1280px) {
       margin-right: 25px;
     }
-  }
-
-  &__svg {
-    fill: $main-color;
   }
 
   &__line {
@@ -100,6 +92,17 @@
   }
 }
 
+.basement__svg-github {
+  width: 18.82px;
+  height: 18.82px;
+  fill: $main-color;
+
+  @media screen and (min-width: 768px) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 .basement__phone {
   display: block;
   text-align: end;
@@ -139,7 +142,7 @@
   height: 32px;
   border-radius: 50%;
   background-color: $social-color;
-  transition: background-color $animation;
+  @include cubic(background-color);
 
   @media screen and (min-width: 768px) {
     width: 34px;
@@ -149,6 +152,28 @@
   &:hover,
   &:focus {
     background-color: $accent-color;
+  }
+}
+
+.basement__svg-telegram {
+  width: 19.2px;
+  height: 14.93px;
+  fill: $main-color;
+
+  @media screen and (min-width: 768px) {
+    width: 20.4px;
+    height: 15.87px;
+  }
+}
+
+.basement__svg-facebook {
+  width: 8.8px;
+  height: 19.2px;
+  fill: $main-color;
+
+  @media screen and (min-width: 768px) {
+    width: 9.35px;
+    height: 20.4px;
   }
 }
 
