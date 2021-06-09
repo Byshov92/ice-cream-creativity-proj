@@ -8,6 +8,9 @@
     padding-top: 37px;
     .header__button {
       margin-left: 250px;
+      // &.is-open {
+      //   display: none;
+      // }
     }
 
     .container {
@@ -161,6 +164,7 @@
     display: none;
   }
 }
+
 .header__button-arrow {
   position: absolute;
   margin-left: 12px;
