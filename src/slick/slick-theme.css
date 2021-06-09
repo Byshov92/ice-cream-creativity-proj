@@ -158,9 +158,6 @@
   opacity: 1;
 }
 .slick-dots li button:before {
-  /* font-family: 'slick';
-  font-size: 12px;
-  line-height: 20px; */
   background-image: url(../images/icons/point.svg);
   background-size: contain;
   position: absolute;
@@ -174,8 +171,6 @@
   text-align: center;
 
   opacity: 0.75;
-  /* color: black;  */
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
