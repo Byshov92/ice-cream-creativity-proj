@@ -6,9 +6,9 @@
             <ul class="nav">
                 <li><a class="nav__link_active nav__link" href="#header">Home</a></li>
                 <li><a class="nav__link" href="#about">About us</a></li>
-                <li><a class="nav__link" href="#about">How it’s made?</a></li>
+                <li><a class="nav__link" href="#advantages">How it’s made?</a></li>
                 <li><a class="nav__link" href="#products">Our products</a></li>
-                <li><a class="nav__link" href="#footer">Contact</a></li>
+                <li><a class="nav__link" href="#contacts">Contact</a></li>
             </ul>
         </nav>
         <button data-modal-open type="button" class="button header__button ">
@@ -18,9 +18,9 @@
             </svg>
             </span>
         </button>
+       
         
-        
-        <div class="menu-container" id="menu-container" data-menu  >
+       <!-- <div class="menu-container" id="menu-container" data-menu  >
                 <button data-modal-open type="button" class="menu-container__button button ">Buy now</button>
                 <ul class="menu-container__list">
                             <li class="menu-container__item"><a class="menu-container__link_active nav__link" href="">Home</a></li>
@@ -37,6 +37,36 @@
         </svg>
       </span>
     </button>
+
+    -->
+       
+            <input type="checkbox" id="menu" />
+            <label for="menu" class="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <div class="menu-container">
+            <button data-modal-open type="button" class="button menu-container__button  ">
+                <span class="header__button-span">Buy now
+                    <svg class="header__button-arrow" width="6" height="10">
+                        <use href="./images/icons/sprite.svg#icon-but" />
+                    </svg>
+                </span>
+            </button>
+            <ul class="menu-container__list">
+                <li class="menu-container__item"><a class="menu-container__link_active" href="#header">Home</a></li>
+                <li class="menu-container__item"><a class="menu-container__link" href="#about">About us</a></li>
+                <li class="menu-container__item"><a class="menu-container__link" href="#advantages">How it’s made?</a></li>
+                <li class="menu-container__item"><a class="menu-container__link" href="#products">Our products</a></li>
+                <li class="menu-container__item"><a class="menu-container__link" href="#contacts">Contact</a></li>
+            </ul>
+       
+    </section>
+
+</header>
+
     <div class="menu-container" id="menu-container" data-menu>
       <button data-modal-open type="button" class="menu-container__button button">Buy now</button>
       <ul class="menu-container__list">
@@ -77,3 +107,4 @@
     </button>
   </section>
 </header>
+
