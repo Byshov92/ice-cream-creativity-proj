@@ -1,12 +1,14 @@
 .basement {
-  padding: 25px 0px;
+  padding: 50px 0px 25px 0px;
   background: $bg-section;
 
   @media screen and (min-width: 768px) {
+    padding-top: 50px;
     padding-bottom: 18px;
   }
 
   @media screen and (min-width: 1280px) {
+    padding-top: 50px;
     padding-bottom: 10px;
   }
 
