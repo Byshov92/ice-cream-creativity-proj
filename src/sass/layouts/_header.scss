@@ -14,7 +14,7 @@
     .container {
       display: flex;
       justify-content: space-between;
-      margin: 0 auto;
+      // margin: 0 auto;
     }
   }
   @media screen and (min-width: 1280px) {
@@ -45,6 +45,17 @@
 .header__container {
   position: absolute;
   z-index: 6;
+  left: 50%;
+  margin-left: -50%;
+  @media screen and(min-width:480px) {
+    margin-left: -240px;
+  }
+  @media screen and(min-width:768px) {
+    margin-left: -384px;
+  }
+  @media screen and(min-width:1280px) {
+    margin-left: -640px;
+  }
 }
 .nav__link {
   font-weight: $font-bold;
