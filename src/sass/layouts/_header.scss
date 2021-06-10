@@ -3,9 +3,10 @@
   width: 100vw;
   padding-top: 6px;
   background-color: $bg-header;
+  padding-bottom: 0;
   @media screen and (min-width: 768px) {
-    padding-bottom: 15px;
-    padding-top: 37px;
+    // padding-top: 37px;
+
     .header__button {
       margin-left: 250px;
     }
@@ -13,11 +14,10 @@
     .container {
       display: flex;
       justify-content: space-between;
+      // margin: 0 auto;
     }
   }
   @media screen and (min-width: 1280px) {
-    padding-bottom: 84px;
-    padding-top: 37px;
     .header__button {
       margin-right: 0;
       margin-left: 0;
@@ -41,7 +41,24 @@
     }
   }
 }
-
+.header__container {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  margin-left: -50%;
+  padding-top: 0px;
+  @media screen and(min-width:480px) {
+    margin-left: -240px;
+  }
+  @media screen and(min-width:768px) {
+    margin-left: -384px;
+    padding-top: 31px;
+  }
+  @media screen and(min-width:1280px) {
+    margin-left: -640px;
+    padding-top: 31px;
+  }
+}
 .nav__link {
   font-weight: $font-bold;
 }
@@ -163,7 +180,6 @@
   position: absolute;
   margin-left: 12px;
   margin-top: 5px;
-  fill: rgb(212, 20, 67);
 }
 
 .menu-container__button {

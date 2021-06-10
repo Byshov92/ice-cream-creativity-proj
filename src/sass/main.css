@@ -1962,11 +1962,11 @@ h1 {
   width: 100vw;
   padding-top: 6px;
   background-color: #ffb8ca;
+  padding-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
   .header {
-    padding-bottom: 15px;
     padding-top: 37px;
   }
   .header .header__button {
@@ -1984,7 +1984,6 @@ h1 {
 
 @media screen and (min-width: 1280px) {
   .header {
-    padding-bottom: 84px;
     padding-top: 37px;
   }
   .header .header__button {
@@ -2147,7 +2146,6 @@ h1 {
   position: absolute;
   margin-left: 12px;
   margin-top: 5px;
-  fill: #d41443;
 }
 
 .menu-container__button {
@@ -2408,6 +2406,16 @@ h1 {
   background-color: #ffb8ca;
 }
 
+.hero .hero-content {
+  position: absolute;
+}
+
+@media screen and (min-width: 768px) {
+  .hero .hero-content {
+    margin-top: -80px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .hero {
     width: 768px;
@@ -2469,26 +2477,6 @@ h1 {
     background-image: url("/images/desktop/hero/w-circle@2x.png");
     background-size: 16px;
     background-position: top 0px right 0px;
-  }
-}
-
-.hero-container {
-  height: 502px;
-}
-
-@media screen and (min-width: 768px) {
-  .hero-container {
-    padding-left: 34px;
-    padding-right: 34px;
-    height: 399px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .hero-container {
-    padding-left: 115px;
-    padding-right: 115px;
-    height: 665px;
   }
 }
 
