@@ -1,4 +1,4 @@
-.producte {
+.product {
   background-color: $main-color;
   padding-top: 120px;
   padding-bottom: 100px;
@@ -13,7 +13,7 @@
     padding-bottom: 120px;
   }
 }
-.producte__title-label {
+.product__title-label {
   font-family: $title-font;
   font-size: 18px;
   line-height: 1.17;
@@ -36,10 +36,10 @@
   }
 }
 
-.producte__list {
+.product__list {
   position: relative;
 }
-.producte__title {
+.product__title {
   font-family: $title-font;
   font-size: 34px;
   line-height: 1.14;
@@ -73,7 +73,7 @@
   }
 }
 
-.producte__item {
+.product__item {
   border-radius: 24px;
   padding: 40px;
   flex-basis: 100%;
@@ -98,7 +98,7 @@
   }
 }
 
-.producte__item:not(:last-child) {
+.product__item:not(:last-child) {
   margin-bottom: 130px;
 
   @media screen and (min-width: 768px) {
@@ -106,15 +106,15 @@
   }
 }
 
-.producte__item--bg-pink {
+.product__item--bg-pink {
   background-color: $bg-header;
 }
 
-.producte__item--bg-yellow {
+.product__item--bg-yellow {
   background-color: $ice-coffee;
 }
 
-.producte__item--bg-green {
+.product__item--bg-green {
   background-color: $milkshakes;
 }
 
@@ -161,7 +161,7 @@
 @include card-bg(yellow, #f0d1a5);
 @include card-bg(green, #c2e297);
 
-.producte__title-card {
+.product__title-card {
   font-family: $title-font;
   font-size: 20px;
   line-height: 1.15;
@@ -242,7 +242,7 @@
   @include product-image(title-card-green, desktop, milkshakes);
 }
 
-.producte__paragraph-card {
+.product__paragraph-card {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.5;
