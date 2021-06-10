@@ -3,9 +3,10 @@
   width: 100vw;
   padding-top: 6px;
   background-color: $bg-header;
+  padding-bottom: 0;
   @media screen and (min-width: 768px) {
-    padding-bottom: 15px;
     padding-top: 37px;
+
     .header__button {
       margin-left: 250px;
     }
@@ -16,7 +17,6 @@
     }
   }
   @media screen and (min-width: 1280px) {
-    padding-bottom: 84px;
     padding-top: 37px;
     .header__button {
       margin-right: 0;
@@ -163,7 +163,6 @@
   position: absolute;
   margin-left: 12px;
   margin-top: 5px;
-  fill: rgb(212, 20, 67);
 }
 
 .menu-container__button {
