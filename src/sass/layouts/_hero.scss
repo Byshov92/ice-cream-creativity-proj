@@ -24,7 +24,7 @@
 
   @media screen and (min-width: 768px) {
     width: 768px;
-    height: 399px;
+    //height: 399px;
     background-image: url('/images/tablet/hero/icecream.png'), url('/images/tablet/hero/tasty.png'),
       url('/images/tablet/hero/ellipse.png'), url('/images/tablet/hero/milk.png');
     background-size: 143px, 168px, 324px, 124px;
@@ -34,12 +34,12 @@
   @media screen and (min-width: 1280px) {
     z-index: 5;
     width: 1280px;
-    height: 665px;
+    //height: 665px;
     background-image: url('/images/desktop/hero/icecream.png'),
       url('/images/desktop/hero/tasty.png'), url('/images/desktop/hero/ellipse.png'),
       url('/images/desktop/hero/milk.png');
     background-size: 236px, 293px, 538px, 188px;
-    background-position: bottom 0px left 594px, bottom 0px righ 0, top 14px left 385px,
+    background-position: top 52px left 500px, bottom 0px right 0, top 14px left 385px,
       bottom 135px left 0;
   }
 }
