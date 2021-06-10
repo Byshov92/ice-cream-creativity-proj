@@ -239,11 +239,13 @@
     line-height: 1.14;
     text-align: right;
     letter-spacing: 0.04em;
+    margin-left: 460px;
     text-transform: uppercase;
     color: $accent-color;
     @media screen and (min-width: 1280px) {
       font-size: 46px;
       line-height: 1.15;
+      margin-left: 700px;
     }
   }
 
