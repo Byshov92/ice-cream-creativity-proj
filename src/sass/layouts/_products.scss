@@ -36,6 +36,9 @@
   }
 }
 
+.producte__list {
+  position: relative;
+}
 .producte__title {
   font-family: $title-font;
   font-size: 34px;
@@ -74,6 +77,12 @@
   border-radius: 24px;
   padding: 40px;
   flex-basis: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+
+  &:hover {
+    transform: rotateY(180deg);
+  }
 
   @media screen and (min-width: 768px) {
     padding: 40px 11px;
@@ -96,7 +105,14 @@
 
 .producte__item--bg-pink {
   background-color: $bg-header;
+  // transform-style: preserve-3d;
+  // transition: all 0.5s ease;
+
+  // &:hover {
+  //   transform: rotateY(180deg);
+  // }
 }
+
 .producte__item--bg-yellow {
   background-color: $ice-coffee;
 }
@@ -104,6 +120,43 @@
 .producte__item--bg-green {
   background-color: $milkshakes;
 }
+
+@mixin card-bg($class-color, $bgcolor) {
+  .front-#{$class-color} {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: $bgcolor;
+    top: 0;
+    left: 0;
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .back-#{$class-color} {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: $bgcolor;
+    transform: rotateY(180deg);
+    border-radius: 24px;
+    top: 0;
+    left: 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@include card-bg(pink, #ffb8ca);
+@include card-bg(yellow, #f0d1a5);
+// @include card-bg(green, #c2e297);
 
 .producte__title-card {
   font-family: $title-font;
@@ -191,14 +244,8 @@
   text-align: center;
   letter-spacing: 0.04em;
   color: $main-color;
-  margin-bottom: 30px;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 40px;
-  }
 
   @media screen and (min-width: 1280px) {
-    margin-bottom: 60px;
     font-size: 16px;
     line-height: 1.76;
   }
@@ -217,8 +264,17 @@
   padding: 0;
   border: 0;
   background-color: $main-color;
-}
+  cursor: pointer;
+  // margin-top: 30px;
 
+  @media screen and (min-width: 768px) {
+    margin-top: 40px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 60px;
+  }
+}
 .icon-arrow-right {
   width: 12px;
   height: 12px;
