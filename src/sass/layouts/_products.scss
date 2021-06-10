@@ -1,4 +1,4 @@
-.producte {
+.product {
   background-color: $main-color;
   padding-top: 120px;
   padding-bottom: 100px;
@@ -13,7 +13,7 @@
     padding-bottom: 120px;
   }
 }
-.producte__title-label {
+.product__title-label {
   font-family: $title-font;
   font-size: 18px;
   line-height: 1.17;
@@ -36,7 +36,11 @@
   }
 }
 
-.producte__title {
+.product__list {
+  position: relative;
+  perspective: 1000px;
+}
+.product__title {
   font-family: $title-font;
   font-size: 34px;
   line-height: 1.14;
@@ -70,23 +74,32 @@
   }
 }
 
-.producte__item {
+.product__item {
   border-radius: 24px;
   padding: 40px;
   flex-basis: 100%;
+  height: 485px;
+
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+
+  &.product__item--rotate {
+    transform: rotateY(180deg);
+  }
 
   @media screen and (min-width: 768px) {
-    padding: 40px 11px;
+    padding: 20px 10px 40px;
     @include calcFor(3, 20px);
   }
 
   @media screen and (min-width: 1280px) {
     padding: 50px 44px;
     @include calcFor(3, 30px);
+    height: 525px;
   }
 }
 
-.producte__item:not(:last-child) {
+.product__item:not(:last-child) {
   margin-bottom: 130px;
 
   @media screen and (min-width: 768px) {
@@ -94,18 +107,62 @@
   }
 }
 
-.producte__item--bg-pink {
+.product__item--bg-pink {
   background-color: $bg-header;
 }
-.producte__item--bg-yellow {
+
+.product__item--bg-yellow {
   background-color: $ice-coffee;
 }
 
-.producte__item--bg-green {
+.product__item--bg-green {
   background-color: $milkshakes;
 }
 
-.producte__title-card {
+@mixin card($bgcolor) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: $bgcolor;
+  top: 0;
+  left: 0;
+  border-radius: 24px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    padding: 20px 10px 40px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 50px 44px;
+  }
+}
+
+@mixin card-bg($card-type, $bgcolor) {
+  .front-#{'' + $card-type} {
+    @include card($bgcolor);
+  }
+
+  .back-#{'' + $card-type} {
+    @include card($bgcolor);
+    transform: rotateY(180deg);
+    border-radius: 24px;
+    justify-content: space-between;
+
+    .icon-arrow-right {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+@include card-bg(pink, #ffb8ca);
+@include card-bg(yellow, #f0d1a5);
+@include card-bg(green, #c2e297);
+
+.product__title-card {
   font-family: $title-font;
   font-size: 20px;
   line-height: 1.15;
@@ -138,11 +195,13 @@
     @media screen and (min-width: 768px) {
       width: calc(100% + 20px);
       height: 225px;
+      bottom: 55px;
     }
 
     @media screen and (min-width: 1280px) {
       width: calc(100% + 90px);
       height: 335px;
+      bottom: 75px;
     }
   }
 
@@ -184,21 +243,16 @@
   @include product-image(title-card-green, desktop, milkshakes);
 }
 
-.producte__paragraph-card {
+.product__paragraph-card {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.04em;
   color: $main-color;
-  margin-bottom: 30px;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 40px;
-  }
+  margin-bottom: 0;
 
   @media screen and (min-width: 1280px) {
-    margin-bottom: 60px;
     font-size: 16px;
     line-height: 1.76;
   }
@@ -212,13 +266,15 @@
   display: flex;
   margin-left: auto;
   margin-right: auto;
+  margin-top: auto;
+
   justify-content: center;
   align-items: center;
   padding: 0;
   border: 0;
   background-color: $main-color;
+  cursor: pointer;
 }
-
 .icon-arrow-right {
   width: 12px;
   height: 12px;
