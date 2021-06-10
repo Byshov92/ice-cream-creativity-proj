@@ -5,6 +5,7 @@
   "main": "index.js",
   "homepage": "https://Byshov92.github.io/ice-cream-creativity-proj",
   "scripts": {
+    "start": "npm run dev",
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /ice-cream-creativity-proj/"
   },
