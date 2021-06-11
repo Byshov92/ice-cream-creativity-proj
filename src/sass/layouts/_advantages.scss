@@ -1,16 +1,13 @@
 .advantages {
   background-color: $bg-section;
-  padding-top: 39px;
-  padding-bottom: 97px;
+  padding: 0 0 97px;
 
   @media screen and (min-width: 768px) {
-    padding-top: 66px;
-    padding-bottom: 140px;
+    padding: 0 0 99px;
   }
 
   @media screen and (min-width: 1280px) {
-    padding-top: 39px;
-    padding-bottom: 139px;
+    padding: 39px 0 100px;
   }
 
   &__list {
@@ -122,24 +119,15 @@
 }
 
 .advantages__item {
-  transition: transform 450ms linear;
+  transition: transform 250ms linear;
 
   &:hover,
   &:focus {
-    transform: scale(1.2);
-
-    @media screen and (max-width: 767px) {
-      transform: scale(1.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
+    transform: scale(1.1);
 
     @media screen and (min-width: 1279px) {
-      box-shadow: 4px 4px rgba(238, 9, 9, 0.3);
-      border-radius: 8px;
+      box-shadow: 4px 4px rgba(238, 9, 9, 0.2);
+      border-radius: 5px;
     }
   }
 }
