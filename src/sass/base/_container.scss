@@ -7,14 +7,15 @@
     width: 100%;
   }
   @media screen and (min-width: 480px) {
-    width: 480px;
+    width: 426px;
+    padding: 0 27px;
   }
   @media screen and (min-width: 768px) {
-    width: 768px;
-    padding: 0 35px;
+    width: 700px;
+    padding: 0 34px;
   }
   @media screen and (min-width: 1280px) {
-    width: 1280px;
-    padding: 0 115px;
+    width: 1050px;
+    padding: 0 35px;
   }
 }
