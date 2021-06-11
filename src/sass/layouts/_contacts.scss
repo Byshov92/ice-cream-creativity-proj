@@ -8,7 +8,6 @@
   background: linear-gradient(rgb(255, 255, 255) 5%, rgb(255, 245, 246) 0px);
 
   @media screen and (min-width: 768px) {
-    // display: inline-block;
     background: linear-gradient(rgb(255, 255, 255) 12%, rgb(255, 245, 246) 0px);
     // padding-top: 119px;
     padding-bottom: 108px;
@@ -36,20 +35,31 @@
 
 .contacts__card-item {
   margin-bottom: 20px;
+  transition: transform 250ms linear;
+  &:hover,
+  &:focus {
+    transform: scale(1.06);
+    box-shadow: 0px 0px 4px 4px rgba(202, 5, 5, 0.2);
+    border-radius: 24px;
+  }
+
   @media screen and (min-width: 768px) {
     margin-right: 20px;
     margin-bottom: 0;
+    &:hover,
+    &:focus {
+      transform: scale(1.02);
+    }
   }
 
   @media screen and (min-width: 1280px) {
     margin-right: 30px;
     margin-bottom: 0;
   }
-}
-
-.contacts__card-item:last-child {
-  margin-right: 0;
-  margin-bottom: 0;
+  &:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
 }
 
 .contacts__article {
@@ -61,26 +71,17 @@
   padding: 43px 20px;
 
   @media screen and (min-width: 768px) {
+    width: 200px;
     height: 544px;
-    padding: 50px 32px;
+    padding: 50px 20px;
   }
 
   @media screen and (min-width: 1280px) {
-    width: 330px;
+    width: 315px;
     height: 572px;
     padding: 51px 43px 62px 44px;
   }
 }
-// .contacts__title {
-//   position: absolute !important;
-//   clip: rect(1px 1px 1px 1px);
-//   clip: rect(1px, 1px, 1px, 1px);
-//   padding: 0 !important;
-//   border: 0 !important;
-//   height: 1px !important;
-//   width: 1px !important;
-//   overflow: hidden;
-// }
 
 .contacts__subtitle {
   width: 80px;
@@ -127,7 +128,7 @@
 }
 
 .contacts__address-title {
-  margin-top: 25px;
+  padding-top: 25px;
   margin-bottom: 0;
   font-family: $main-font;
   font-style: normal;
@@ -138,20 +139,21 @@
   letter-spacing: 0.04em;
   color: $head-text;
   @media screen and (min-width: 768px) {
-    margin-top: 30px;
+    padding-top: 30px;
     font-size: 14px;
   }
   @media screen and (min-width: 1280px) {
     display: block;
-    margin-top: 32px;
+    padding-top: 32px;
     font-size: 16px;
   }
 }
 
 .contacts__address-subtitle {
   width: 179px;
-  margin-bottom: 25px;
-  margin-top: 10px;
+  padding-bottom: 25px;
+
+  padding-top: 10px;
   font-family: $main-font;
   font-style: normal;
   font-weight: $font-medium;
@@ -160,13 +162,13 @@
   color: $main-text;
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
     font-size: 14px;
     line-height: 1.66;
   }
   @media screen and (min-width: 1280px) {
     width: 243px;
-    margin-bottom: 32px;
+    padding-bottom: 32px;
     font-size: 16px;
     line-height: 1.83;
     // letter-spacing: 0.04em;
@@ -194,52 +196,51 @@
   }
 
   &:nth-child(2n) {
-    margin-bottom: 10px;
+    padding-bottom: 10px;
     font-family: $main-font;
     font-weight: $font-medium;
     font-size: 12px;
     line-height: 1.86;
     color: $circle;
     @media screen and (min-width: 768px) {
-      margin-bottom: 16px;
+      padding-bottom: 16px;
       font-size: 14px;
     }
     @media screen and (min-width: 1280px) {
-      margin-bottom: 15px;
+      padding-bottom: 15px;
       font-size: 16px;
     }
   }
 
   &:first-child {
-    margin-top: 25px;
-
+    padding-top: 25px;
     @media screen and (min-width: 768px) {
-      margin-top: 30px;
+      padding-top: 30px;
     }
     @media screen and(min-width: 1280px) {
-      margin-top: 32px;
+      padding-top: 32px;
     }
   }
 
   &:last-child {
-    margin-bottom: 25px;
+    padding-bottom: 25px;
     @media screen and (min-width: 768px) {
-      margin-bottom: 30px;
+      padding-bottom: 30px;
     }
     @media screen and (min-width: 1280px) {
-      margin-bottom: 32px;
+      padding-bottom: 32px;
     }
   }
 }
 
 .contacts__address-list {
-  margin-top: 25px;
-  margin-bottom: 0;
+  padding-top: 25px;
+  padding-bottom: 0;
   @media screen and (min-width: 768px) {
-    margin-top: 30px;
+    padding-top: 30px;
   }
   @media screen and (min-width: 1280px) {
-    margin-top: 32px;
+    padding-top: 32px;
   }
 }
 
@@ -250,6 +251,7 @@
   font-size: 12px;
   line-height: 1.5;
   color: $main-text;
+
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 1.83;
@@ -278,10 +280,10 @@
   }
 }
 
-.contacts__button-icon {
+.contacts__link-icon {
   position: absolute;
-  top: 17%;
-  left: 63%;
+  top: 18%;
+  left: 65%;
   fill: $main-color;
   width: 10px;
   height: 10px;
@@ -289,18 +291,18 @@
   background-image: url();
   background-repeat: no-repeat;
   @media screen and (min-width: 768px) {
-    top: 32%;
+    top: 38%;
     left: 44%;
   }
 
   @media screen and (min-width: 1280px) {
-    top: 32%;
+    top: 38%;
     left: 46%;
   }
 }
 
 .contacts__button-icon--accent {
-  top: 72%;
+  top: 73%;
   left: 60%;
   width: 10px;
   height: 10px;
@@ -310,22 +312,23 @@
   background-image: url('/images/icons/buy.svg');
   background-repeat: no-repeat;
   @media screen and (min-width: 768px) {
-    top: 33%;
-    left: 69%;
+    top: 41%;
+    left: 72%;
   }
 
   @media screen and (min-width: 1280px) {
-    top: 33%;
-    left: 63%;
+    top: 41%;
+    left: 64%;
   }
 }
 
-.contacts__button--accent {
+.contacts__link--accent {
+  width: 165px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
-  min-width: 162px;
+  // min-width: 162px;
   border: transparent;
   height: 44px;
   background: $accent-color;
@@ -335,6 +338,7 @@
   @media screen and (min-width: 768px) {
     width: 192px;
     margin-right: 15px;
+    margin-bottom: 0;
     margin-left: 0;
   }
   @media screen and (min-width: 1280px) {
@@ -346,6 +350,7 @@
   &:hover,
   &:focus {
     background-color: $social-color;
+    box-shadow: 0px 0px 4px 4px rgba(202, 5, 5, 0.2);
   }
 }
 
@@ -353,7 +358,7 @@
   display: block;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 10px;
+
   min-width: 162px;
   border: transparent;
   height: 44px;
@@ -364,22 +369,33 @@
   @media screen and (min-width: 768px) {
     width: 192px;
     margin-right: 15px;
+    margin-bottom: 0;
     margin-left: 0;
+    &:last-child {
+      margin-right: 0;
+    }
   }
   @media screen and (min-width: 1280px) {
     width: 192px;
     margin-right: 15px;
+    margin-bottom: 0;
     margin-left: 0;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &:hover,
   &:focus {
     background-color: $btn-hover;
+    box-shadow: 0px 0px 4px 4px rgba(202, 5, 5, 0.2);
   }
 }
 
-.contacts__button-text {
+.contacts__link-text {
+  display: inline-block;
   position: relative;
+  padding-top: 12px;
   padding-left: 17px;
   padding-right: 30px;
   font-family: $main-font;
@@ -420,5 +436,348 @@
     padding-top: 12px;
     padding-left: 30px;
     padding-bottom: 12px;
+  }
+}
+.contacts.modal-franchise.is-hidden {
+  opacity: 1;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 13;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  overflow-y: hidden;
+  .modal-franchise {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+.modal-franchise {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  height: 450px;
+  width: 450px;
+  background-color: #ffffff;
+  margin: 50px auto;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 22px;
+  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 40px;
+  @media screen and (max-width: 480px) {
+    width: 80%;
+    height: 450px;
+    left: 45%;
+    transform: translate(-45%, -50%) scale(1);
+  }
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    height: 450px;
+    left: 45%;
+    transform: translate(-45%, -50%) scale(1);
+  }
+  @media screen and (min-width: 768px) {
+    width: 450px;
+    height: 450px;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  @media screen and (min-width: 1280px) {
+    width: 528px;
+    height: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.modal__close-button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border: transparent;
+  border-radius: 50%;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+
+  &:hover .modal__close-icon,
+  &:focus .modal__close-icon {
+    fill: $circle;
+  }
+}
+
+.modal-franchise__form {
+  position: absolute;
+  top: 75px;
+  width: 448px;
+  display: flex;
+  flex-direction: column;
+  font-weight: $font-normal;
+  @media screen and (max-width: 480px) {
+    width: 95%;
+    top: 112px;
+    margin-top: 20px;
+  }
+  @media screen and (min-width: 480px) {
+    width: 370px;
+    top: 112px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 370px;
+    top: 112px;
+  }
+  @media screen and (min-width: 1280px) {
+    top: 105px;
+    width: 448px;
+  }
+}
+
+.modal-franchise__subtitle {
+  position: relative;
+  font-family: $title-font;
+  margin: 0px;
+  top: 40px;
+  text-align: center;
+  font-weight: $font-normal;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: $accent-color;
+  @media screen and (max-width: 480px) {
+    font-size: 16px;
+    text-align: center;
+    width: 85%;
+  }
+  @media screen and (min-width: 480px) {
+    display: block;
+    width: 370px;
+    height: 60px;
+    padding: 0 10px;
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: block;
+    width: 100%;
+    top: 40px;
+    padding: 10px 50px;
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+.modal-franchise__form {
+  position: absolute;
+  top: 75px;
+  width: 448px;
+  display: flex;
+  flex-direction: column;
+  font-weight: $font-normal;
+  margin-top: 20px;
+  @media screen and (max-width: 480px) {
+    width: 95%;
+    top: 112px;
+    margin-top: 20px;
+  }
+  @media screen and (min-width: 480px) {
+    width: 370px;
+    top: 112px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 370px;
+    top: 112px;
+  }
+  @media screen and (min-width: 1280px) {
+    top: 105px;
+    width: 448px;
+  }
+}
+
+.modal-franchise__labels {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  color: $main-text;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
+.modal-franchise__labels-input {
+  width: 100%;
+  height: 40px;
+  border: 0.5px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+  padding: 12px 12px 12px 42px;
+  background-color: #fff;
+  @media screen and (max-width: 479px) {
+    width: 80%;
+  }
+}
+
+.modal-franchise__labels-icon--name,
+.modal-franchise__labels-icon--mail {
+  @extend %modal-input-icon;
+}
+.modal-franchise__labels-icon--mail {
+  top: 44%;
+}
+
+.modal-franchise__labels-input {
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-franchise__labels-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-franchise__labels {
+  &:hover,
+  &:focus,
+  &:focus-within {
+    .modal-franchise__labels-input {
+      border-color: $accent-color;
+      cursor: pointer;
+    }
+    .modal-franchise__labels-icon {
+      fill: $accent-color;
+    }
+  }
+}
+
+.modal-franchise__button {
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+  top: 20px;
+  display: block;
+  padding: 10px 55px;
+  @extend %button;
+  background-color: $accent-color;
+  color: $main-color;
+  transition: $animation;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    background-color: $social-color;
+    box-shadow: 0px 0px 4px 4px rgba(202, 5, 5, 0.2);
+  }
+  @media screen and(max-width:479px) {
+    width: 50%;
+    margin-left: 15%;
+    margin-top: 30px;
+    padding: 10px 10%;
+  }
+}
+
+.modal-franchise__labels-agreement {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: $font-normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $accent-color;
+  display: inline;
+  margin: 10px 0 20px 12px;
+  padding: 0;
+}
+
+.modal-franchise__labels--link {
+  text-decoration: underline;
+  color: $accent-color;
+  display: inline;
+}
+
+.modal-franchise__agreement--text {
+  position: absolute;
+  left: 20px;
+  bottom: -4%;
+  // bottom: 62px;
+  @media screen and(max-width:292px) {
+    // bottom: 45px;
+    bottom: -2%;
+    width: 80%;
+    font-size: 10px;
+  }
+  @media screen and(min-width:293px) {
+    bottom: 42px;
+    width: 80%;
+    font-size: 12px;
+  }
+  @media screen and(min-width:336px) {
+    width: 80%;
+    bottom: 19%;
+  }
+  @media screen and(min-width:768px) {
+    width: 97%;
+    font-size: 12px;
+    bottom: 27%;
+    // bottom: 62px;
+  }
+  @media screen and(min-width:1280px) {
+    width: 100%;
+    // bottom: 62px;
+    left: 35px;
+  }
+}
+
+.modal-franchise__checkbox {
+  position: absolute;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  border-radius: 12px;
+  opacity: 0;
+  display: none;
+  @media screen and (max-width: 1279px) {
+    margin: 0 0 0 -12px;
+  }
+  &:focus {
+    display: block;
+    z-index: 100;
+    outline: 2px solid $bg-menu;
+  }
+  &:checked + .checkmark {
+    background-color: $accent-color;
+    background-image: url(../images/checkbox.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+  }
+}
+
+.checkmark {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  border-radius: 12px;
+  padding: 2px;
+  justify-content: center;
+  background-color: $main-color;
+  border: 2px solid $bg-menu;
+  @media screen and(min-width:1280px) {
+    left: 12px;
+  }
+  &:hover,
+  &:focus {
+    cursor: pointer;
   }
 }
