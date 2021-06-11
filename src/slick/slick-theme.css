@@ -163,7 +163,9 @@
 }
 
 .slick-dots li.slick-active button:before {
-  color: black;
-  opacity: 0.75;
+  background-image: url('../images/icons/Vector.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
 }
 /*# sourceMappingURL=slick-theme.css.map */
